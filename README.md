@@ -1,7 +1,13 @@
 Heroku buildpack: Vert.x
 ========================
 
-This is a [Heroku buildpack](http://devcenter.heroku.com/articles/buildpack) for [Vert.X](http://vertx.io/) apps.
+This is a fork of tomaslin's [Heroku buildpack](http://devcenter.heroku.com/articles/buildpack) for [Vert.X](http://vertx.io/) apps.
+
+This buildpack deploys with vertx.2.0.2-final. For detecting your app, it requires a vertx-marker file in your project's root directory.
+
+If you do not provide a Procfile, your app is started with:
+
+	vertx run server.groovy
 
 Usage
 -----
@@ -9,9 +15,9 @@ Usage
 Example usage:
 
     $ ls
-    server.js
+    vertx-marker
 
-    $ heroku create --stack cedar --buildpack https://github.com/tomaslin/heroku-buildpack-vertx-jdk7.git
+    $ heroku create APP_NAME -b https://github.com/metanet/heroku-buildpack-vertx-jdk7.git
 	
 	$ git push heroku master
 

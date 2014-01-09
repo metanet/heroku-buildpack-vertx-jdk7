@@ -37,13 +37,15 @@ if [ -d "$CACHE_DIR/.vertx" ]; then
   echo "done"
 fi
 
-VERTX_URL="http://dl.bintray.com/vertx/downloads/vert.x-2.0.1-final.tar.gz"
+cd $BUILD_DIR
+
+VERTX_URL="http://dl.bintray.com/vertx/downloads/vert.x-2.0.2-final.tar.gz"
 
 if [ ! -d "$BUILD_DIR/.vertx" ]; then
-  echo -n "-----> Installing Vert.x build (to .vertx)....."
+  echo -n "-----> Installing Vert.x 2.0.2-final build (to .vertx)....."
   curl --max-time 320 --location $VERTX_URL | tar xz
-  mv vert* .vertx
-  rm '.vertx/bin/vertx.bat'
+  mv vert.x-2.0.2-final .vertx
+  rm .vertx/bin/vertx.bat
   cd $BUILD_DIR
   cp -r .vertx $CACHE_DIR/.vertx
   echo " done"
