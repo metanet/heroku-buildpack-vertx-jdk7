@@ -26,4 +26,4 @@ Example usage:
     -----> Vert.x app detected
     -----> Installing Vert.x..... done
 
-The buildpack will detect your app as a Vert.x project if it has a file called server.js. If you don't provide a Procfile, the build pack will default to launching your app with `vertx run server.js`
+
