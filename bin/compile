@@ -39,12 +39,12 @@ fi
 
 cd $BUILD_DIR
 
-VERTX_URL="http://dl.bintray.com/vertx/downloads/vert.x-2.0.2-final.tar.gz"
+VERTX_URL="http://dl.bintray.com/vertx/downloads/vert.x-2.1M2.tar.gz"
 
 if [ ! -d "$BUILD_DIR/.vertx" ]; then
-  echo -n "-----> Installing Vert.x 2.0.2-final build (to .vertx)....."
+  echo -n "-----> Installing vert.x-2.1M2 build (to .vertx)....."
   curl --max-time 320 --location $VERTX_URL | tar xz
-  mv vert.x-2.0.2-final .vertx
+  mv vert.x-2.1M2 .vertx
   rm .vertx/bin/vertx.bat
   cd $BUILD_DIR
   cp -r .vertx $CACHE_DIR/.vertx

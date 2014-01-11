@@ -3,7 +3,7 @@ Heroku buildpack: Vert.x
 
 This is a fork of tomaslin's [Heroku buildpack](http://devcenter.heroku.com/articles/buildpack) for [Vert.X](http://vertx.io/) apps.
 
-This buildpack deploys with vertx.2.0.2-final. For detecting your app, it requires a vertx-marker file in your project's root directory.
+This buildpack deploys with vertx.2.1M2. For detecting your app, it requires a vertx-marker file in your project's root directory.
 
 If you do not provide a Procfile, your app is started with:
 
